@@ -10,9 +10,9 @@ export const getAllPosts = async () => {
     await delay(3000);
     return new Array(10).fill(1).map((_, i) => {
         return {
-            title: `This is post ${i}`,
-            slug: `this-is-slug-${i}`,
-            body: 'uuuh',
+            title: `This is post ${i+1}`,
+            slug: `this-is-slug-${i+1}`,
+            body: `post ${i+1}`,
         }
     })
 }

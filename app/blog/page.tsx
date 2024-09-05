@@ -5,13 +5,13 @@ export default async function Blog(){
     const posts = await getAllPosts();
     return (
         <div>
-            {posts.map(post =>
-            <div key={`${post.title} + ${post.slug}`}>
-                <Link href={`/blog/${post.slug}`}>
-                    <h1>{post.title}</h1>
-                </Link>
-            </div>
-            )}
+            {posts.map(post => (
+                <div key={`${post.title}-${post.slug}`}>
+                    <Link href={`/blog/${post.slug}`}>
+                        <h1>{post.title}</h1>
+                    </Link>
+                </div>
+            ))}
         </div>
     )
 }
